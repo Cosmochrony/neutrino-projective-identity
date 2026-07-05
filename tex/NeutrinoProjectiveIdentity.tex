@@ -1,0 +1,295 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{doi}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\geometry{margin=2.5cm}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=black
+}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\UU}{\mathrm{U}}
+\newcommand{\Epi}{E_\Pi}
+\newcommand{\Sbundle}{\mathcal{S}_\Pi}
+\newcommand{\Upmns}{U_{\mathrm{PMNS}}}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\Uckm}{U_{\mathrm{CKM}}}
+
+\title{Neutrino Mixing and Projective Particle Identity\\[0.4em]
+\large A Structural Note}
+
+\author{J\'{e}r\^{o}me Beau\\[0.3em]
+\small Independent Researcher\\
+\small \texttt{jerome.beau@cosmochrony.org}}
+
+\date{2026}
+
+\begin{document}
+
+  \maketitle
+
+  \begin{abstract}
+    Neutrino oscillations establish that the weak flavour basis and the mass propagation basis of the lepton
+    sector are not aligned.
+    This note examines what this misalignment means for the ontology of particle identity within the Cosmochrony
+    framework, where particles are invariants of a non-injective projection rather than primitive objects.
+    Three structural observations are developed.
+    First, basis misalignment is generic: neutral meson systems exhibit the same distinction between interaction
+    labels and propagating eigenmodes, and the neutrino is distinguished only by being elementary within the
+    Standard Model inventory.
+    Second, within the projective reading, alignment --- not misalignment --- is the feature requiring a
+    mechanism: an identity-stabilising projection channel.
+    Charged fermions possess such channels; neutrinos, singlets under $\SU(3)_C \times \UU(1)_{\mathrm{em}}$,
+    do not.
+    The large PMNS mixing is then the unfixed default, consistent with the anarchy hypothesis, while the
+    near-diagonality of the CKM matrix becomes the non-trivial explanandum, requiring the charged channels to pin
+    the up-type and down-type mass bases to a common projective frame.
+    Third, the Dirac-or-Majorana alternative is reread as the degree to which the projection resolves relational
+    conjugation, with neutrinoless double beta decay as its standard discriminator.
+    The note is structural throughout: it derives no mixing angles and no masses.
+    It fixes the reading under which the neutrino sector is the sharpest available test case for projective
+    particle identity, and states one falsifiable structural expectation: sectors with fewer identity-stabilising
+    projection channels generically exhibit larger mixing between interaction and propagation bases.
+    Interpretive status: the reinterpretation of particle identity as a projection invariant is a structural
+    reading of standard neutrino phenomenology, not a competing prediction for it; all quantitative content of
+    the standard oscillation formalism is retained as the operational effective description.
+  \end{abstract}
+
+  \medskip
+  \noindent\textbf{Keywords.}
+  neutrino oscillations; particle identity; projective invariants; PMNS matrix; CKM matrix; anarchy hypothesis;
+  neutral meson mixing; Dirac and Majorana neutrinos; non-injective projection; ontology of particle physics.
+
+  \newpage
+  \tableofcontents
+
+  \newpage
+  \section{Introduction}
+    \label{sec:introduction}
+
+    The Standard Model tabulates particles as primitive entries: each species is a well-defined object carrying a
+    fixed set of labels.
+    Neutrinos are the elementary case where this tabulation is under visible strain.
+    The states produced and detected by the weak interaction ($\nu_e$, $\nu_\mu$, $\nu_\tau$) are not the states
+    that propagate; the observed identity of a neutrino depends on which basis the observation accesses.
+    This tension has recently been articulated as a pressure point on Standard-Model ontology in the philosophy
+    of particle physics~\cite{Hobart2026OnticTypes}.
+
+    The Cosmochrony framework~\cite{Cosmochrony} treats particles as invariants of a non-injective projection
+    $\Pi$ from a static relational substrate, rather than as primitive objects.
+    The white paper already assigns neutrinos a special position, as \emph{partially projectable modes} close to
+    the boundary of projectability.
+    The present note develops the structural core of that position in the language of the fermionic-matter
+    sub-programme~\cite{Beau2026fmnote}, where the fermionic sector arises from the admissible spinor bundle
+    $\Sbundle$ and its projective endomorphism $\Epi$~\cite{Beau2026q14, Beau2026prs}.
+
+    The scope is deliberately narrow.
+    The note does not derive mixing angles, masses, or oscillation corrections; the chiral polar factor carrying
+    generation mixing is invisible to $\Epi^2$ at the present stratum~\cite{Beau2026pyo}, so any quantitative
+    claim would be premature.
+    What the note fixes is the reading: which features of the neutrino sector are generic, which require a
+    mechanism, and which structural expectation is falsifiable.
+
+  \section{The Standard Misalignment}
+    \label{sec:standard-misalignment}
+
+    The following facts are standard and are imported, not derived.
+    Flavour eigenstates are defined by the charged-current weak interaction; mass eigenstates diagonalize
+    propagation; the two bases are related by the unitary PMNS matrix $\Upmns$,
+    \[
+      \ket{\nu_\alpha} = \sum_i (\Upmns^*)_{\alpha i}\,\ket{\nu_i}, \qquad \alpha \in \{e,\mu,\tau\},
+    \]
+    a structure anticipated by Pontecorvo~\cite{Pontecorvo1957} and by Maki, Nakagawa and
+    Sakata~\cite{MakiNakagawaSakata1962}, and established experimentally by the observation of atmospheric and
+    solar neutrino oscillations~\cite{Fukuda1998, Ahmad2002}.
+    Oscillations imply non-degenerate masses and therefore force an extension of the minimal Standard Model, in
+    which neutrinos are massless.
+    In the quark sector the analogous misalignment between up-type and down-type mass bases is encoded by the
+    CKM matrix~\cite{Cabibbo1963, KobayashiMaskawa1973}, which is experimentally near-diagonal, whereas
+    $\Upmns$ contains two large angles.
+
+    Operationally, the standard oscillation formalism --- interference between mass eigenstates with distinct
+    dispersion --- is retained without modification throughout this note.
+    The question addressed here is not \emph{how} neutrinos oscillate but \emph{what oscillation says about the
+    ontology of the oscillating object}.
+
+  \section{The Neutral-Meson Comparison}
+    \label{sec:neutral-mesons}
+
+    Basis misalignment is not exceptional in itself.
+    Neutral meson systems exhibit the same structural distinction: $K^0$ and $\bar K^0$ are the strong-interaction
+    (production) labels, while the propagating eigenmodes are their mixtures, as recognised by Gell-Mann and
+    Pais~\cite{GellMannPais1955}.
+    Whenever an interaction basis and a propagation basis coexist and no mechanism forces them to coincide, the
+    generic situation is that they do not.
+
+    The ontological difference is that neutral mesons are composite: their mixing can be attributed to the
+    dynamics of constituents, and the naive particle ontology can retreat to the quark level.
+    Neutrinos are elementary within the Standard Model inventory, so no such retreat is available.
+    The neutrino is therefore the case where the contextuality of particle identity --- flavour at
+    production and detection, mass in propagation --- must be confronted at the level of the fundamental
+    tabulation itself.
+
+  \section{The Projective Reading: Alignment Requires a Stabiliser}
+    \label{sec:projective-reading}
+
+    In the Cosmochrony framework a particle label is an invariant of the projection $\Pi$: flavour is an
+    invariant of the weak coupling, and mass is a spectral invariant of the projected residue, the eigenvalue
+    data of the projective endomorphism $\Epi$~\cite{Beau2026prs}.
+    These are distinct invariants of distinct structures, and there is no structural reason for the weak flavour
+    basis to diagonalize the projected spectral mass residue.
+    The structural statement of this note is therefore:
+    \begin{quote}
+      \emph{Basis misalignment is the generic situation; basis alignment requires an additional projective
+      stabiliser.}
+    \end{quote}
+    Neutrino oscillations are then not an anomaly of particle identity but the expected manifestation of a
+    neutral chiral matching mode whose weak-interaction label and spectral mass label are distinct projective
+    invariants.
+
+    This restates, in the vocabulary of the fermionic-matter sub-programme, the white-paper description of
+    neutrinos as partially projectable modes~\cite{Cosmochrony}.
+    One white-paper formulation is deliberately softened here.
+    The claim that oscillations reflect ``variations in projectability rather than interference between
+    fundamental mass eigenstates'' is retained only in its ontological part: the standard interference
+    description remains the operational effective description, and what the framework reinterprets is the status
+    of the mass eigenstates --- projected spectral invariants rather than fundamental degrees of freedom.
+
+  \section{The CKM--PMNS Contrast}
+    \label{sec:ckm-pmns}
+
+    The projective reading reverses the usual explanatory burden.
+    As a structural reading, not a derived result, charged fermions possess projection channels that stabilise
+    their identity between production and detection --- the electromagnetic and colour couplings, together with
+    the operational pinning provided by large mass splittings and rapid decoherence --- whereas neutrinos,
+    singlets under $\SU(3)_C \times \UU(1)_{\mathrm{em}}$, lack any such stabilising channel.
+
+    The large leptonic mixing encoded by $\Upmns$ is then the unfixed default.
+    This is consistent with the anarchy hypothesis for neutrino masses~\cite{HallMurayamaWeiner2000}, which
+    showed that the oscillation data are well accounted for by a mass matrix with no preferred structure.
+    The projective reading adds to anarchy what anarchy does not supply: a reason for its sector selectivity.
+    Randomness is expected precisely where no identity-stabilising channel constrains the basis, and only there.
+
+    Conversely, the near-diagonality of $\Uckm$ becomes the non-trivial feature to be explained.
+    In this reading, CKM near-alignment requires the additional assumption that the charged projection channels
+    pin the up-type and down-type mass bases to a \emph{common} projective frame.
+    This common-frame assumption is the load-bearing hypothesis of the reversal: two sectors stabilised
+    independently could remain mutually rotated, so stabilisation alone does not imply alignment.
+    Its status is conditional, and its derivation is an open problem of the fermionic-matter
+    sub-programme~\cite{Beau2026fmnote}.
+
+    The reversal yields one falsifiable structural expectation:
+    \begin{quote}
+      \emph{Sectors with fewer identity-stabilising projection channels should generically exhibit larger mixing
+      between interaction and propagation bases, unless an independent alignment mechanism is present.}
+    \end{quote}
+    The known pattern --- large PMNS angles in the unpinned neutral sector, small CKM angles in the doubly
+    pinned quark sector --- conforms to this expectation; a future extension of the inventory (for example a
+    sterile or otherwise unpinned state) would test it further.
+
+  \section{Dirac versus Majorana as Conjugation Resolution}
+    \label{sec:dirac-majorana}
+
+    The Majorana alternative~\cite{Majorana1937} asks whether the neutrino is distinct from its antiparticle.
+    In the projective reading this is not a fundamental binary choice but a question about the resolution of the
+    projection: a Dirac neutrino corresponds to a configuration whose conjugate projected realisations are
+    distinguished by $\Pi$, a Majorana neutrino to one whose partial projectability collapses the conjugate
+    classes~\cite{Cosmochrony}.
+    Lepton number conservation is then an emergent bookkeeping of regimes where conjugate configurations remain
+    distinguishable, and its violation becomes admissible exactly where the distinction is erased.
+
+    The standard discriminator, neutrinoless double beta decay, acquires a structural interpretation: it probes
+    whether the projection resolves relational conjugation in the neutral chiral sector.
+    No rate prediction is made here; the observation or exclusion of the process constrains the resolution
+    structure of $\Pi$, not a parameter of this note.
+
+  \section{Phenomenological Outlook (Structural)}
+    \label{sec:phenomenology}
+
+    The following directions are recorded as structural expectations, without quantitative content at this
+    stage.
+    Long-baseline coherence: as a mode without identity-stabilising channels, the neutrino is the natural probe
+    of decoherence effects sensitive to global properties of the projected geometry; departures from standard
+    oscillation patterns at ultra-long baselines would be the corresponding signature.
+    Neutrinoless double beta decay: the conjugation-resolution reading of Section~\ref{sec:dirac-majorana}.
+    Cosmological backgrounds: as the modes closest to the projection boundary, relic neutrinos are the
+    observational window most sensitive to pre-geometric structure~\cite{Cosmochrony}.
+    Deriving any of these quantitatively requires the explicit Lorentzian $\Epi$ and the Yukawa sector, which
+    are the primary open deliverables of the fermionic-matter sub-programme~\cite{Beau2026fmnote, Beau2026bim}.
+
+  \section{Positioning}
+    \label{sec:positioning}
+
+    Three adjacent positions delimit the present one.
+    Hobart's ontic-types analysis~\cite{Hobart2026OnticTypes} identifies the same pressure point --- neutrino
+    mixing challenges a one-to-one correspondence between particle type, flavour label, and mass eigenstate ---
+    and proposes a family ontology in which the manifest state depends on interaction conditions.
+    The present note shares the contextuality diagnosis but supplies a mechanism candidate: identity is a
+    projection invariant, and its contextuality is the absence of a stabilising channel, embedded in a framework
+    where the fermionic sector itself is derived~\cite{Beau2026q14}.
+    The anarchy hypothesis~\cite{HallMurayamaWeiner2000} shares the ``large mixing is the default'' conclusion;
+    the present reading adds the sector-selectivity criterion and the reversal of the explanatory burden onto
+    CKM.
+    Standard quantum field theory treats flavour and mass bases as effective bookkeeping related by unitary
+    rotation; the present note retains that formalism operationally and differs only in the ontological status
+    assigned to the bases.
+
+  \section{Status of Claims}
+    \label{sec:status}
+
+    Standard (imported): flavour--mass basis misalignment, oscillations, neutral meson mixing, near-diagonal
+    CKM, large-angle PMNS, anarchy consistency of the oscillation data.
+    Structural (this note): the stabiliser reading of alignment, the identification of the neutrino as a neutral
+    chiral matching mode, the PMNS-default/CKM-explanandum reversal, the conjugation-resolution reading of the
+    Dirac--Majorana alternative, and the mixing-versus-channels expectation.
+    Conditional: the common projective frame assumption for CKM near-alignment (load-bearing, underived).
+    Open: the quantitative pinning mechanism, the derivation of mixing magnitudes (blocked at the trivial chiral
+    polar class $[U_\Pi]=[I]$ of the present stratum~\cite{Beau2026pyo}), the resolution criterion for the
+    Dirac--Majorana alternative, and any oscillation correction.
+
+  \section{Conclusion}
+    \label{sec:conclusion}
+
+    Neutrinos are the elementary case where particle identity is manifestly contextual: the weak basis, the mass
+    basis, and the ontological inventory do not coincide by necessity.
+    Read projectively, this contextuality is not a puzzle but the default: identity labels are invariants of a
+    non-injective projection, distinct invariants need not align, and alignment is what requires a mechanism.
+    The neutrino sector thereby becomes the sharpest available test case for projective particle identity, and
+    the quark sector inherits the substantive question: why is CKM nearly diagonal?
+
+    \subsection*{Interpretive outlook}
+    The following is an interpretation, a structural reading of established phenomenology, and not a result.
+    If particle identity is projective rather than primitive, the Standard Model table is a catalogue of stable
+    projection invariants, and the neutrino marks its frontier: the entry least pinned by projection channels,
+    closest to the boundary where the projected description itself degrades.
+    On this reading, oscillation experiments are not merely measuring parameters of an extended Standard Model;
+    they are probing how much identity a mode can retain when almost nothing in the projection holds it fixed.
+    The interpretive wager of the framework is that the pattern of mixing across sectors --- anarchic where
+    unpinned, aligned where pinned --- is a visible trace of the projection structure from which particles
+    emerge.
+
+  \bibliographystyle{plain}
+  \bibliography{cosmochrony-bibliography,external-refs}
+
+\end{document}
