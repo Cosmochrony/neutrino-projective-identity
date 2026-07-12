@@ -6,3 +6,6 @@ out/*.synctex.gz
 out/*.fls
 out/*.out
 pdfs/
+out/
+.idea/
+.DS_Store
