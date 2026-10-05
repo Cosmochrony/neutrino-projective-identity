@@ -8,6 +8,7 @@ authors:
 repository-code: "https://github.com/Cosmochrony/neutrino-projective-identity"
 url: "https://cosmochrony.org/science/neutrinos/"
 doi: "10.5281/zenodo.21207750"
+version: "1.0.1"
 license: "CC-BY-4.0"
 preferred-citation:
   type: article
