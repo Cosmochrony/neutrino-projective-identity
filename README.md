@@ -1,4 +1,4 @@
-# Neutrino Mixing and Projective Particle Identity
+# Neutrino Mixing and Projective Particle Identity: A Structural Note
 
 A structural companion note to the fermionic-matter sub-programme of the Cosmochrony research programme.
 
