@@ -22,7 +22,7 @@ oscillation formalism as the operational effective description.
 
 ## Status
 
-Working note, v1.0.1 (local candidate; last deposited version 1.0). Structural note; no quantitative predictions at this stage.
+Working note, v1.0.1. Structural note; no quantitative predictions at this stage.
 
 ## Build
 
